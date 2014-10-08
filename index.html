@@ -1,55 +1,271 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>彬♥芸</title>
-    <meta content="width=device-width,user-scalable=no" name="viewport">
-    <meta name="Author" contect="koala">  
-    <link rel="stylesheet" href="index.css">
-    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon114.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon57.png" />
+    
+<meta charset="UTF-8">
+    
+<title>彬♥芸</title>
+    
+<meta content="width=device-width,user-scalable=no" name="viewport">
+    
+<meta name="Author" contect="koala">  
+    
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon114.png" />
+    
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon57.png" />
+
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
+body{line-height:1.5;font-size:12px;font-family:"hiragino sans gb",Arial;color:#cbcffd;background:#c30d23;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+html,body{height:100%}
+article img{display:block;width:100%;}
+article .qdgl{margin-top:-80px;}
+article .mail{
+ margin-left:6%;  -webkit-transform-origin: 0 0;
+  -webkit-animation: avatar 1s ease-in-out infinite;
+}
+
+figure {
+  position: relative;
+  font-size: 1em;
+  height: 22em;
+  margin-bottom:2.3em;margin-top: 1.8em;
+}
+
+figure:after {
+  content: '甜蜜加载中..';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  font-size: 2em;
+  margin: -2.5em 0 0 -2.5em;
+  z-index: 1;
+  -webkit-animation: loading 500ms ease-in-out infinite;
+}
+
+figure img {
+  opacity: 0;
+  border-radius: 1px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 3px #000;
+  box-sizing: border-box;
+}
+
+figure .img1 {
+  position: absolute;
+  left: 1.8em;
+  top: 0;
+  height: 52%;
+  z-index: 4;
+}
+
+figure .img2 {
+  position: absolute;
+  right: 1.8em;
+  top: 0;
+  height: 49%;
+  z-index: 3;
+}
+
+figure .img3 {
+  position: absolute;
+  left: 2.3em;
+  top: 50%;
+  height: 52%;
+  z-index: 2;
+}
+
+figure .img4 {
+  position: absolute;
+  right: 2.2em;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+
+article .map {
+position: relative;
+  padding: 0.2em 0.1em 2em;
+  margin: 0.5em 3.25em 0.5em;
+  border-radius: 1em;
+  background-color: #a90b1e;
+}
+
+
+.map .mapjt {margin:1em auto;width:90%;}
+article .map img {
+  display: block;
+  width: 100%;
+}
+
+article a {
+  display: block;
+ margin:auto 0.5em; color: #fff;
+  text-decoration: underline;
+}
+
+.tac {
+ font-size:1em; margin-top:1em; text-align: center;
+}
+
+.imgs:after {
+  display: none;
+}
+
+.imgs .img1 {
+  -webkit-transform: rotateZ(-367deg);
+  -webkit-animation: img1 3s forwards 1s;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+.imgs .img2 {
+  -webkit-ransform: rotateZ(355deg);
+  -webkit-animation: img2 2.5s forwards 0.5s;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+.imgs .img3 {
+  -webkit-transform: rotateZ(-368deg);
+  -webkit-animation: img3 1.5s forwards 0.5s;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+.imgs .img4 {
+  -webkit-transform: rotateZ(356deg);
+  -webkit-animation: img4 2s forwards;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+@-webkit-keyframes img1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateZ(0) translateY(-12em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateZ(-367deg) translateY(0);
+  }
+}
+
+@-webkit-keyframes img2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateZ(0) translateY(-12em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateZ(355deg) translateY(0);
+  }
+}
+
+@-webkit-keyframes img3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateZ(0) translateY(-12em);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateZ(-368deg) translateY(0);
+  }
+
+}
+@-webkit-keyframes img4 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes avatar {
+  0% {
+    -webkit-transform: scale(0.85, 0.85);
+  }
+  50% {
+    -webkit-transform: scale(0.9, 0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.85, 0.85);
+  }
+}
+
+</style>
 </head>
+
 <body >
 	
-    <header>
-		<p>黄先生 <span>&#38;</span> 王小姐</p>
-		<img src="img/4501.png" alt="黄彬 王筑芸邀请您~">
-    </header>
-    <article >
-    	<strong>请柬:</strong>
-    	<p>谨订于2014年公历10月26日(农历八月初五)星期日下午6时,在昆明 西园北路楚雄大厦1楼大明星彝人会馆举行“黄彬 王筑芸”结婚典礼，敬备喜筵 ！</p>
-    	<p class="indent0">期待您抽空参加我们的结婚典礼！！</p>
-        <i></i>
-    </article>
-	<figure id="imgs">
-		<img class="img1" src="img/4502.jpg" alt="幸福见证"class="img2">
-		<img class="img2"  src="img/4503.jpg" alt="幸福见证"class="img2">
-		<img class="img3"  src="img/4504.jpg" alt="幸福见证" class="img2">
-		<img class="img4" src="img/4505.jpg" alt="幸福见证" class="img2">
-	</figure>
-    <article>
-        <strong>交通指引:</strong>
-        <p class="indent0">昆明市五华区西园北路76号楚雄大厦1楼大明星彝人会馆</p>
-        <p class="indent0">酒店电话 <span type="tel">(0871)68336833</span></p>
-        <!-- maps -->
-        <div class="map" id="map-canvas" >
-            <a href="http://j.map.baidu.com/7rFlx">
-               <img src="http://api.map.baidu.com/staticimage?&center=102.685716,25.053035&zoom=17&markers=102.685177,25.053035&markerStyles=l,A" alt="云南昆明五华区西园北路76号 电话:(0871)68336833)"> 
-            </a>
+    
+<article>
+
+<img  src="img/hl01.gif" />
+   
+<img class="mail" src="img/4501.png">
+<img class="qdgl" src="img/hl02.gif">
+</article>
+	
+ 
+<figure id="imgs">
+		
+<img class="img1" src="img/4502.jpg" alt="幸福见证"class="img2">
+		
+<img class="img2"  src="img/4503.jpg" alt="幸福见证"class="img2">
+		
+<img class="img3"  src="img/4504.jpg" alt="幸福见证" class="img2">
+		
+<img class="img4" src="img/4505.jpg" alt="幸福见证" class="img2">
+	
+</figure>
+  
+<article>
+
+
+<!-- maps -->
+        
+<div class="map" >
+ 
+<img class="mapjt" src="img/hljt.gif">
+<a href="http://j.map.baidu.com/7rFlx">
+               
+<img src="http://api.map.baidu.com/staticimage?&center=102.685716,25.053035&zoom=17&markers=102.685177,25.053035&markerStyles=l,A" alt="云南昆明五华区西园北路76号 电话:(0871)68336833)"> 
             
-        </div>
-        <a class="tac" href="http://j.map.baidu.com/7rFlx">(触摸地图导航)</a>
-        <i class="tran3"></i>
-    </article>
-    <article class="last">
-        <strong>再次温馨提示</strong>
-        <p>宴会时间: 2014年公历10月26日(农历八月初五)星期日下午6时</p>
-        <p>宴会地点:  <a href="http://j.map.baidu.com/7rFlx" >昆明市五华区西园北路76号楚雄大厦1楼大明星彝人会馆(导航位置)</a></p>
-        <p>宴会接待: <br>吴煌<span type="tel">15920485924</span>,</p>
-        <p>吴煌<span type="tel">15920485924</span></p>
-    </article>
+</a>
+            
+        
+       
+<a class="tac" href="http://j.map.baidu.com/7rFlx">(触摸地图导航)</a>
+      
+   
+</div>
+ 
+<img src="img/hl04.gif">
+</article>
+
 </body>
+
 <script type="text/javascript">
+
     window.onload = function(){
         func1();
     }
@@ -57,6 +273,8 @@
         document.getElementById('imgs').className = "imgs"
     }
     
+
 </script>
+
 
 </html>
