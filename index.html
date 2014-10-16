@@ -158,6 +158,11 @@ article a {
   }
 }
 
+#toggleMusic{display:none}
+#toggleMusic+.m-toggle{background-image:url(../images/sprite/sprite_icon.png);-webkit-background-size:40px auto;-moz-background-size:40px auto;-o-background-size:40px auto;background-size:40px auto;background-repeat:no-repeat;}
+#toggleMusic+.m-toggle{position:absolute;right:10px;top:80px;width:30px;height:30px;background-position:1px -29px;border-radius:50%;z-index:120;}
+#toggleMusic:checked+.m-toggle{background-position:1px 1px;-webkit-animation:myanimate 3s forwards;-moz-anima4tion:myanimate 3s infinite alternate;-o-animation:myanimate 3s infinite alternate;-ms-animation:myanimate 3s infinite alternate;animation:myanimate 3s infinite alternate;}
+
 </style>
 </head>
 
@@ -183,6 +188,46 @@ article a {
   
 <article>
 
+
+            <input type="checkbox" name="" id="toggleMusic" checked="checked" style="z-index:9999999999 !important"/>
+            <label for="toggleMusic" class="m-toggle" style=""></label>
+            <audio autoplay="autoplay" id="audio_play" loop="loop">
+                <source src="http://121.40.147.27/music/City Hall.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <script>
+            var myVideo = document.getElementById("audio_play");
+            function playVid()
+            {
+                myVideo.play();
+            }
+            function pauseVid()
+            {
+                myVideo.pause();
+            }
+            $(document).ready(function() {
+                $(document).one('touchstart', function(e) {
+                    if (myVideo.paused) {
+                        myVideo.play();
+                    }
+                });
+                if (/i(Phone|P(o|a)d)/.test(navigator.userAgent)) {
+                    if (myVideo.paused) {
+                        playVid();
+                        $('#toggleMusic').attr("checked", true);
+                    }
+                    playVid();
+                }
+                //音乐开关
+                $('.m-toggle').on('click', function() {
+                    if ($('#toggleMusic:checked').length == 0) {
+                        playVid();
+                    } else {
+                        pauseVid();
+                    }
+                });
+            });
+        </script>
 
 <!-- maps -->
         
